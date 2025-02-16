@@ -60,4 +60,9 @@ public class Person {
     public void setAddress(Address address) {
         this.address = address;
     }
+    
+    @Override
+    public String toString() {
+        return "Person{name='" + name + "', dob=" + dob + "}";
+    }
 }

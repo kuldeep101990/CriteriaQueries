@@ -67,7 +67,7 @@ public class HibernateInheritanceExample {
                         .add(Restrictions.eq("a.city", "Delhi")); // Filter by city 'Delhi'
 
                 
-                List results1 = criteria1.list();
+                List<Person> results1 = criteria1.list();
                 // Execute the query and retrieve the results
                 System.out.println("results1 "+results1);
                 
@@ -97,12 +97,7 @@ public class HibernateInheritanceExample {
 
                 List<PersonSummary> results4 = criteria4.list();
                 
-                // Process the results (can be done in any suitable way)
-                results4.forEach(new Consumer<PersonSummary>() {
-					public void accept(PersonSummary ps) {
-						System.out.println("results4 "+ ps);
-					}
-				});
+                System.out.println("results4 "+ results4);
                 
                 // 5. Aggregation
                 // Count the number of persons in the result set
